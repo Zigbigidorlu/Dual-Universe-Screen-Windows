@@ -1,2 +1,2 @@
-# DU_Windows
-Draggable, customizable, instantly adaptable windows for screens in Dual Universe
+# Dual Universe Window Library
+Easily create flexable, independently updateable, fully customizable windows and buttons for your screens in Dual Universe!
