@@ -25,3 +25,18 @@ Creating a new window:
 ```lua
 WinLib:new(html,options,buttons)
 ```
+The new window takes three parameters:
+*HTML* (required): The content of the window, in HTML<br />
+*Options*: The options for the window, in object form<br />
+*Buttons*: Any buttons you want to include in the window, in object form
+
+Window options:<br />
+*title*: [string] Title of the window. Will produce a title bar, which is used to drag the window. If excluded, and the window is flagged to be draggable, the window can be dragged from anywhere within it's bounds.<br />
+*class*: [string] The name of a custom CSS class you would like to style the window with. Please see "styling windows" below.<br />
+*posX*: [int] The X position, in pixels, you would like the window to open at.<br />
+*posY*: [int] The Y position, in pixels, you would like the window to open at.<br />
+*width*: [int] The width, in pixels, the window will be.<br />
+*height*: [int] The height, in pixels, the window will be.<br />
+*titleHeight*: [int] The height, in pixels, the title bar will be (if title is provided). Width will always be 100% of the parent.<br />
+*draggable*: [boolean] TRUE if the window will be draggable.<br />
+*alwaysOnTop*: [boolean] TRUE if the window will always be on top of other windows.<br />
