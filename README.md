@@ -7,3 +7,5 @@ Easily create flexable, independently updateable, fully customizable windows and
 * Assign custom classes for high customization
 
 ![winlib](https://user-images.githubusercontent.com/7476963/99282992-07236700-27fa-11eb-8b77-bc749330678b.png)
+
+-- Documentation WIP
