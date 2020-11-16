@@ -6,4 +6,4 @@ Easily create flexable, independently updateable, fully customizable windows and
 * Assign a title bar to limit draggable regions
 * Assign custom classes for high customization
 
-![winlib](https://user-images.githubusercontent.com/7476963/99282101-e3135600-27f8-11eb-8585-4fddd524f2ba.png)
+![winlib](https://user-images.githubusercontent.com/7476963/99282992-07236700-27fa-11eb-8b77-bc749330678b.png)
