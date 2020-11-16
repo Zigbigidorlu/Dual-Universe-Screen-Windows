@@ -26,20 +26,22 @@ Creating a new window:
 WinLib:new(html,options,buttons)
 ```
 ### Parameters:
-**HTML** (required): [HTML] The content of the window, in HTML<br />
-**Options**: [Object] The options for the window; may be `nil`.<br />
-**Buttons**: [Object] Any buttons you want to include in the window; may be `nil`.
+Parameter | Type | Description
+-|-|-
+**HTML** (required) | HTML | The content of the window.
+**Options** | Object | The options for the window; may be `nil`.
+**Buttons** | Object | Any buttons you want to include in the window; may be `nil`.
 
 ### Window options:
 Option | Type | Description 
 -|-|-
-**title** | string | Title of the window. Will produce a title bar, which is used to drag the window. If excluded, and the window is flagged to be draggable, the window can be dragged from anywhere within it's bounds.<br />
-**class** | string | The name of a custom CSS class you would like to style the window with. Please see "styling windows" below.<br />
-**posX** | int | The X position, in pixels, you would like the window to open at.<br />
-**posY** | int | The Y position, in pixels, you would like the window to open at.<br />
-**width** | int | The width, in pixels, the window will be.<br />
-**height** | int | The height, in pixels, the window will be.<br />
-**titleHeight** | int | The height, in pixels, the title bar will be (if title is provided). Width will always be 100% of the parent.<br />
-**draggable** | boolean | TRUE if the window will be draggable.<br />
-**alwaysOnTop** | boolean | TRUE if the window will always be on top of other windows.<br />
+**title** | string | Title of the window. Will produce a title bar, which is used to drag the window. If excluded, and the window is flagged to be draggable, the window can be dragged from anywhere within it's bounds.
+**class** | string | The name of a custom CSS class you would like to style the window with. Please see "styling windows" below.
+**posX** | int | The X position, in pixels, you would like the window to open at.
+**posY** | int | The Y position, in pixels, you would like the window to open at.
+**width** | int | The width, in pixels, the window will be.
+**height** | int | The height, in pixels, the window will be.
+**titleHeight** | int | The height, in pixels, the title bar will be (if title is provided). Width will always be 100% of the parent.
+**draggable** | boolean | TRUE if the window will be draggable.
+**alwaysOnTop** | boolean | TRUE if the window will always be on top of other windows.
 
