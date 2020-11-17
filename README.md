@@ -25,7 +25,7 @@ WinLib:new(html,options,buttons)
 ```
 ### Parameters
 ```lua
-local myWindow = WinLib:new("Hello, world!", {class = "ThisIsMyWindow", title = "Look at this window!", draggble = true}, {button1, button2})
+local myWindow = WinLib:new("Hello, world!", {class = "firstWindow", title = "Look at this window!", draggble = true}, {button1, button2})
 ```
 Parameter | Type | Description
 -|-|-
@@ -66,18 +66,18 @@ Method | Description
 **setTitle** | Updates the title of the window. If set to `nil`, title bar will disappear.
 **delete** | Removes the window from the screen.
 
-## Creating a new button:
+## Creating a new button
 ```lua
 WinLib.buttons:new(html,onclick,options)
 ```
-### Parameters:
+### Parameters
 ```lua
 local button1 = WinLib.buttons:new("Click me!", clickFunction, {posX = 150, posY = 75})
 ```
 Parameter | Type | Description
 -|-|-
 **HTML** (required) | HTML | The content of the button.
-**OnClick** (required) | Function | Function activated when the user clicks the button.
+**OnClick** | Function | Function activated when the user clicks the button. May be `nil` only if you plan to assign a function later.
 **Options** | Object | The options for the button; may be `nil`.
 
 ### Button OnClick
@@ -93,8 +93,8 @@ OnClick is a function called when the user clicks on the button.
 Option | Type | Description 
 -|-|-
 **class** | string | The name of a custom CSS class you would like to style the button with. Please see "Styling" below.
-**posX** | int | The X position, in pixels, you would like the button to be. Position is absolute within the window.
-**posY** | int | The Y position, in pixels, you would like the button to be. Position is absolute within the window.
+**posX** | int | The X position, in pixels, you would like the button to be. Position is absolute *within the window*.
+**posY** | int | The Y position, in pixels, you would like the button to be. Position is absolute *within the window*.
 **width** | int | The width, in pixels, the button will be.
 **height** | int | The height, in pixels, the button will be.
 
@@ -108,3 +108,43 @@ Method | Description
 -|-
 **setHTML** | Updates the content of the button.
 **setClick** | Updates the click function.
+
+## Styling
+```css
+.firstWindow {
+  background:blue !important;
+  font-size:120px !important;
+ }
+ ```
+For both Windows and Buttons, you may pass a "class" option to specify a class name. You need simply style in CSS that class name. There are some important notes, however, that should be heeded when styling.
+You should not modify the following, as they are set by the code and are used to determine where to detect clicks:
+- Width
+- Max-Width
+- Min-Width
+- Height
+- Max-Height
+- Min-Height
+- Position
+- Top
+- Left
+- Right
+- Bottom
+
+Additionally, the following will require the !important flag to override:
+- Background
+- Color
+- Font-family
+- Border
+- Box-Shadow
+- Padding
+- Font-size
+
+### Example Code
+```lua
+local clickFunction = function() { system.print("You clicked me!") } -- Our first click function
+local button1 = WinLib.buttons:new("Click me!", clickFunction, {posX = 150, posY = 75}) -- Our first button
+local button2 = WinLib.buttons:new("Close", nil, {posX = 300, posY = 150}) -- Our second button. Note the nil in function; this is overriden later.
+local myWindow = WinLib:new("Hello, world!", {class = "firstWindow", title = "Look at this window!", draggble = true}, {button1, button2}) -- Here we create our window.
+local clickClose = function() { myWindow.delete() } -- Created after window was assigned to a variable so we can use it's method.
+button2.setClick(clickClose) -- Set the second button's click function
+```
