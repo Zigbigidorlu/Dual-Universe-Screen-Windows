@@ -21,7 +21,7 @@ WinLib requires that you have a programming board and a screen (any size will do
 
 ## Usage
 
-Creating a new window:
+## Creating a new window:
 ```lua
 WinLib:new(html,options,buttons)
 ```
