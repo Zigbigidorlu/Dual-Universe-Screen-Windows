@@ -80,7 +80,7 @@ Parameter | Type | Description
 **onclick** (required) | Function | Function activated when the user clicks the button.
 **Options** | Object | The options for the button; may be `nil`.
 
-### Button onclick
+### Button OnClick
 ```lua
 clickFunction = function() { system.print("You clicked me!") }
 ```
