@@ -25,10 +25,10 @@ Creating a new window:
 ```lua
 WinLib:new(html,options,buttons)
 ```
+### Parameters:
 ```lua
 local myWindow = WinLib:new("Hello, world!",{class = "ThisIsMyWindow", title = "Look at this window!", draggble = true},{button1, button2})
 ```
-### Parameters:
 Parameter | Type | Description
 -|-|-
 **HTML** (required) | HTML | The content of the window.
