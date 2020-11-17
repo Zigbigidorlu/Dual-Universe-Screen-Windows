@@ -8,6 +8,9 @@ Easily create flexable, independently updateable, fully customizable windows and
 
 ![winlib](https://user-images.githubusercontent.com/7476963/99282992-07236700-27fa-11eb-8b77-bc749330678b.png)
 
+## Contact me
+If you need help, or have a suggestion, feel free to contact me on Discord: Adam#2245
+
 ## Requirements
 WinLib requires that you have a programming board and a screen (any size will do). The screen must be linked to the board and be the first linked item.
 
