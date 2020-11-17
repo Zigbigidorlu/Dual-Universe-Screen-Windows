@@ -97,3 +97,14 @@ Option | Type | Description
 **posY** | int | The Y position, in pixels, you would like the button to be. Position is absolute within the window.
 **width** | int | The width, in pixels, the button will be.
 **height** | int | The height, in pixels, the button will be.
+
+### Methods
+```lua
+local clickFunction = function() { myWindow.delete() }
+button1.setHTML("Try clicking me, now!")
+button1.setClick(clickFunction)
+```
+Method | Description
+-|-
+**setHTML** | Updates the content of the button.
+**setClick** | Updates the click function.
