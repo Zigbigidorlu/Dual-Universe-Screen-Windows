@@ -36,6 +36,9 @@ Parameter | Type | Description
 **Buttons** | Object | Any buttons you want to include in the window; may be `nil`.
 
 ### Window options:
+```lua
+{class = "ThisIsMyWindow", title = "Look at this window!", draggble = true}
+```
 Option | Type | Description 
 -|-|-
 **title** | string | Title of the window. Will produce a title bar, which is used to drag the window. If excluded, and the window is flagged to be draggable, the window can be dragged from anywhere within it's bounds.
@@ -48,3 +51,13 @@ Option | Type | Description
 **draggable** | boolean | TRUE if the window will be draggable.
 **alwaysOnTop** | boolean | TRUE if the window will always be on top of other windows.
 
+### Methods
+```lua
+myWindow.setHTML("Goodbye, world!")
+myWindow.delete()
+```
+Method | Description
+-|-
+**setHTML** | Updates the content of the window.
+**setTitle** | Updates the title of the window. If set to `nil`, title bar will disappear.
+**delete** | Removes the window from the screen.
