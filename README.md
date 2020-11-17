@@ -77,7 +77,7 @@ local button1 = WinLib.buttons:new("Click me!", clickFunction, {posX = 150, posY
 Parameter | Type | Description
 -|-|-
 **HTML** (required) | HTML | The content of the button.
-**onclick** (required) | Function | Function activated when the user clicks the button.
+**OnClick** (required) | Function | Function activated when the user clicks the button.
 **Options** | Object | The options for the button; may be `nil`.
 
 ### Button OnClick
