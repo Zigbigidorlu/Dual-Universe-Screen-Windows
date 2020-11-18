@@ -112,6 +112,12 @@ Method | Description
 **setHTML** | Updates the content of the button.
 **setClick** | Updates the click function.
 
+## Custom CSS
+```lua
+WindowLib:custom_css("html { background:#808080; }")
+```
+Custom CSS may be easily added via the `custom_css` method.
+
 ## Styling
 ```css
 .firstWindow {
