@@ -1,4 +1,4 @@
-# Dual Universe Window Library (WinLib)
+# Dual Universe Window Library (WindowLib)
 Easily create flexable, independently updateable, fully customizable windows and buttons for your screens in Dual Universe!
 * Create independently controllable sections on your screen
 * Update content on the fly
@@ -6,17 +6,17 @@ Easily create flexable, independently updateable, fully customizable windows and
 * Assign a title bar to limit draggable regions
 * Assign custom classes for high customization
 
-![winlib](https://user-images.githubusercontent.com/7476963/99282992-07236700-27fa-11eb-8b77-bc749330678b.png)
+![WindowLib](https://user-images.githubusercontent.com/7476963/99282992-07236700-27fa-11eb-8b77-bc749330678b.png)
 
 ## Contact me
 If you need help, or have a suggestion, feel free to contact me on Discord: Adam#2245
 
 ## Requirements
-WinLib requires that you have a programming board and a screen (any size will do). The screen must be linked to the board and be the first linked item.
+WindowLib requires that you have a programming board and a screen (any size will do). The screen must be linked to the board and be the first linked item.
 
-## Installing WinLib
+## Installing WindowLib
 ### IMPORTANT: If you have existing LUA on your Core slot, it WILL be overwritten!
-1. From the sources menu above, open "winlib.lua."
+1. From the sources menu above, open "WindowLib.lua."
 2. Click the "raw" button in the upper right above the code.
 3. Copy the contents of the page (Ctrl + A, Ctrl + C).
 4. In DU, right click your programming board.
@@ -24,11 +24,11 @@ WinLib requires that you have a programming board and a screen (any size will do
 
 ## Creating a new window
 ```lua
-WinLib:new(html,options,buttons)
+WindowLib:new(html,options,buttons)
 ```
 ### Parameters
 ```lua
-local myWindow = WinLib:new("Hello, world!", {class = "firstWindow", title = "Look at this window!", draggble = true}, {button1, button2})
+local myWindow = WindowLib:new("Hello, world!", {class = "firstWindow", title = "Look at this window!", draggble = true}, {button1, button2})
 ```
 Parameter | Type | Description
 -|-|-
@@ -71,11 +71,11 @@ Method | Description
 
 ## Creating a new button
 ```lua
-WinLib.buttons:new(html,onclick,options)
+WindowLib.buttons:new(html,onclick,options)
 ```
 ### Parameters
 ```lua
-local button1 = WinLib.buttons:new("Click me!", clickFunction, {posX = 150, posY = 75})
+local button1 = WindowLib.buttons:new("Click me!", clickFunction, {posX = 150, posY = 75})
 ```
 Parameter | Type | Description
 -|-|-
@@ -151,9 +151,9 @@ Additionally, the following will require the !important flag to override:
 ### Example Code
 ```lua
 local clickFunction = function() { system.print("You clicked me!") } -- Our first click function
-local button1 = WinLib.buttons:new("Click me!", clickFunction, {posX = 150, posY = 75}) -- Our first button
-local button2 = WinLib.buttons:new("Close", nil, {posX = 300, posY = 150}) -- Our second button. Note the nil in function; this is overriden later.
-local myWindow = WinLib:new("Hello, world!", {class = "firstWindow", title = "Look at this window!", draggble = true}, {button1, button2}) -- Here we create our window.
+local button1 = WindowLib.buttons:new("Click me!", clickFunction, {posX = 150, posY = 75}) -- Our first button
+local button2 = WindowLib.buttons:new("Close", nil, {posX = 300, posY = 150}) -- Our second button. Note the nil in function; this is overriden later.
+local myWindow = WindowLib:new("Hello, world!", {class = "firstWindow", title = "Look at this window!", draggble = true}, {button1, button2}) -- Here we create our window.
 local clickClose = function() { myWindow.delete() } -- Created after window was assigned to a variable so we can use it's method.
 button2.setClick(clickClose) -- Set the second button's click function
 ```
