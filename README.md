@@ -15,7 +15,6 @@ If you need help, or have a suggestion, feel free to contact me on Discord: Adam
 WindowLib requires that you have a programming board and a screen (any size will do). The screen must be linked to the board and be the first linked item.
 
 ## Installing WindowLib
-### IMPORTANT: If you have existing LUA on your Core slot, it WILL be overwritten!
 1. From the sources menu above, open "WindowLib.lua."
 2. Click the "raw" button in the upper right above the code.
 3. Copy the contents of the page (Ctrl + A, Ctrl + C).
