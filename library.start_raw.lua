@@ -308,9 +308,6 @@ function WindowLib:beginDrag()
     local mouse = self:getMousePos() -- Get the mouse position
     self.grabbed.offset = {x = mouse.x - self.grabbed.posX,
                            y = mouse.y - self.grabbed.posY} -- Get the offset of the mouse from the top left
-
-    -- wlib_drag timer uses a tick with the content: WindowLib:performDrag()
-    unit.setTimer("wlib_drag",1/refresh_rate) -- Loop the drag action
 end
 
 -- Drag the window
@@ -331,7 +328,6 @@ end
 -- Stop dragging
 function WindowLib:releaseWindow()
     self.grabbed = nil -- Clear the dragged property
-    unit.stopTimer("wlib_drag") -- Stop the drag loop
 end
 
 -- Perform a click check (only on release to avoid a loop)
@@ -435,9 +431,6 @@ function WindowLib:init()
     self.screen         = Screen.addContent(0,0,nil) -- Everything we write will be on this layer
     self.windows        = {} -- Table containing all our windows
     self.buttonLock     = nil -- Lets us lock a button so it doesn't loop
-
-    -- wlib timer uses a tick with the content: WindowLib:update()
-    unit.setTimer("wlib",1/refresh_rate) -- Begins our update loop to keep the screen current
 end
 
 WindowLib:init()
