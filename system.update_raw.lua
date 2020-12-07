@@ -1,0 +1,2 @@
+WindowLib:update()
+WindowLib:performDrag()
