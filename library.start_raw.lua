@@ -1,4 +1,4 @@
--- Please note, you need the system update script as well to make this work from raw.
+-- Please note, you need the system update script (system.update_raw.lua) as well to make this work from raw.
 
 -- Window Library
 WindowLib = {["index"] = 0}
