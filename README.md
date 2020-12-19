@@ -21,6 +21,9 @@ WindowLib requires that you have a programming board and a screen (any size will
 4. In DU, right click your programming board.
 5. Choose Advanced > Paste Lua configuration from clipboard.
 
+## A note about percent signs
+In Lua, the percent sign (`%`) is an escape character. When passing parameters with `%`, you will need to escape the escape like so: `%%`.
+
 ## Creating a new window
 ```lua
 WindowLib:new(html,options,buttons)
